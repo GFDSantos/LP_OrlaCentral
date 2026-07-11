@@ -1,0 +1,48 @@
+.diferenciais {
+  padding: 40px 8%;
+  background: #f8fafc;
+}
+
+.diferenciais h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #005DAA;
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.diferencial-card {
+  background: white;
+  padding: 18px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.3s ease;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.05);
+}
+
+.diferencial-card:hover {
+  transform:
+    translateY(-8px);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .diferenciais-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}

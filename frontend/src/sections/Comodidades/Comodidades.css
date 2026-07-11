@@ -1,0 +1,33 @@
+.comodidades {
+  padding: 70px 8%;
+  background:
+    linear-gradient(
+      135deg,
+      #08142e,
+      #005DAA
+    );
+  color: white;
+}
+
+.comodidades-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.comodidades span {
+  color: #f4f7f5;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.comodidades h2 {
+  font-size: 38px;
+  margin: 24px 0;
+}
+
+.comodidades p {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
+}

@@ -1,0 +1,41 @@
+.sobre {
+  padding: 40px 8%;
+  background: white;
+}
+
+.sobre-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sobre-tag {
+  color: #005DAA;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.sobre h2 {
+  font-size: 40px;
+  margin: 20px 0;
+  color: #08142e;
+}
+
+.sobre p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .sobre {
+    padding: 70px 24px;
+  }
+  .sobre h2 {
+    font-size: 30px;
+  }
+  .sobre p {
+    font-size: 20px;
+  }
+}

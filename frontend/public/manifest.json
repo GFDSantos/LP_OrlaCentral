@@ -1,0 +1,9 @@
+{
+  "short_name": "OrlaCentral",
+  "name": "Orla Central",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0b1633",
+  "background_color": "#ffffff"
+}
