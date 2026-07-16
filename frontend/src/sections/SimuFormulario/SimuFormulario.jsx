@@ -1,34 +1,42 @@
-import "./Formulario.css";
+import "./SimuFormulario.css";
 import { useState } from "react";
 import empreendimento from "../../data/empreendimento";
 
-function Formulario({
+function SimuFormulario({
   aberto,
   fecharFormulario
 }) {
-  const [nome, setNome] =
-    useState("");
-  const [telefone, setTelefone] =
-    useState("");
-  const [email, setEmail] =
-    useState("");
+
+  const [nome, setNome] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [email, setEmail] = useState("");
+
   function enviarWhatsApp() {
-    const mensagem = `
-Olá! Tenho interesse no empreendimento ${empreendimento.nome}.
-Nome: ${nome}
-Telefone: ${telefone}
-E-mail: ${email}
-`;
+    const mensagem = `Olá!
+
+Gostaria de solicitar uma simulação de financiamento.
+
+Empreendimento:
+${empreendimento.nome}
+Nome:
+${nome}
+Telefone:
+${telefone}
+E-mail:
+${email}
+
+Aguardo contato para receber as orientações sobre a documentação necessária e iniciar minha análise de crédito.`;
+
     const link =
-`https://wa.me/${empreendimento.whatsapp}?text=${encodeURIComponent(mensagem)}`;
+      `https://wa.me/${empreendimento.whatsapp}?text=${encodeURIComponent(mensagem)}`;
+
     window.open(link, "_blank");
-    /* FECHA MODAL */
     fecharFormulario();
-    /* LIMPA CAMPOS */
     setNome("");
     setTelefone("");
     setEmail("");
   }
+
   if (!aberto) return null;
   return (
     <div
@@ -37,9 +45,7 @@ E-mail: ${email}
     >
       <div
         className="formulario-container"
-        onClick={(e) =>
-          e.stopPropagation()
-        }
+        onClick={(e) => e.stopPropagation()}
       >
         <button
           className="voltar-btn"
@@ -49,13 +55,17 @@ E-mail: ${email}
         </button>
 
         <h2>
-          Solicite Atendimento
+          Solicite sua Simulação
         </h2>
 
         <p>
-          Preencha seus dados e um especialista da Cury
-          entrará em contato para apresentar o empreendimento
-          e esclarecer todas as suas dúvidas.
+          Informe seus dados.
+
+          <br /><br />
+
+          Um especialista da Cury fará contato para explicar as
+          condições de financiamento, orientar sobre a documentação
+          necessária e iniciar sua análise de crédito.
         </p>
 
         <input
@@ -66,7 +76,6 @@ E-mail: ${email}
             setNome(e.target.value)
           }
         />
-
         <input
           type="text"
           placeholder="Seu telefone"
@@ -75,7 +84,6 @@ E-mail: ${email}
             setTelefone(e.target.value)
           }
         />
-
         <input
           type="email"
           placeholder="Seu e-mail"
@@ -84,21 +92,20 @@ E-mail: ${email}
             setEmail(e.target.value)
           }
         />
-
         <button
           className="enviar-btn"
           onClick={enviarWhatsApp}
           disabled={
-          !nome.trim() ||
-          !telefone.trim() ||
-          !email.trim()
-  }
->
-  Enviar
-</button>
+            !nome.trim() ||
+            !telefone.trim() ||
+            !email.trim()
+          }
+        >
+          Solicitar Simulação
+        </button>
       </div>
     </div>
   );
 }
 
-export default Formulario;
+export default SimuFormulario;
