@@ -22,6 +22,23 @@
   color: #08142e;
 }
 
+.sobre-frase {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #4b5563;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.sobre-frase p{
+  margin-bottom:10px;
+}
+
+.sobre-frase p:last-child{
+  margin-bottom:0;
+}
+
 .sobre p {
   font-size: 18px;
   line-height: 1.8;
@@ -35,6 +52,12 @@
   .sobre h2 {
     font-size: 30px;
   }
+
+  .sobre-frase {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
   .sobre p {
     font-size: 20px;
   }
