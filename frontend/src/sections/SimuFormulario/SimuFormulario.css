@@ -76,7 +76,7 @@
   margin-top:10px;
   border:none;
   border-radius:14px;
-  background:#25D366;
+  background:#005CA9;
   color:#fff;
   font-size:1rem;
   font-weight:bold;
@@ -85,7 +85,7 @@
 }
 
 .enviar-btn:hover{
-  background:#1EBE5D;
+  background:#005CA9;
   transform:scale(1.02);
 }
 

@@ -6,8 +6,8 @@ function Footer() {
 
     <footer className="footer">
       <p>
-        © 2026 Rio Corretor.
-        Todos os direitos reservados.
+        © 2026 www.curycorretorrio.com.br<br />
+        Todos os direitos reservados
       </p>
 
       <span>
